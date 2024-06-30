@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.mohylev.news.NewsScreen
 import com.mohylev.newssearch.ui.theme.NewsSearchTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,14 +23,10 @@ class MainActivity : ComponentActivity() {
 
             NewsSearchTheme {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "login"){
+                NavHost(navController = navController, startDestination = "news"){
 
-                    composable("login") {
-
-                    }
-
-                    composable("home"){
-
+                    composable("news") {
+                        NewsScreen()
                     }
 
                 }
