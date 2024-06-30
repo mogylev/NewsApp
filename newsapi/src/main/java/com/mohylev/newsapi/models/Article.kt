@@ -22,7 +22,7 @@ import java.time.Instant
 
 @Serializable
 data class ArticleApiModel(
-    @SerialName("source") val source: Source,
+    @SerialName("source") val source: SourceApiModel,
     @SerialName("author") val author: String,
     @SerialName("title") val title: String,
     @SerialName("description") val description: String,
@@ -33,7 +33,7 @@ data class ArticleApiModel(
 )
 
 @Serializable
-data class Source(
+data class SourceApiModel(
     @SerialName("id")  val id: String,
     @SerialName("name")  val name: String
 )

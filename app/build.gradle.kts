@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.mohylev.newssearch"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -51,8 +51,9 @@ android {
 
 dependencies {
 
+    implementation(project(":features:news"))
+
     implementation(libs.core.ktx)
-    implementation(libs.compose.viewmodel)
     implementation(libs.compose.navigation)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
